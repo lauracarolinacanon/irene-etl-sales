@@ -1,0 +1,29 @@
+{
+	"name": "DS_PARQUET_BRONZE_CLIENTES",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStoragedev",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_tabla": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().p_tabla",
+					"type": "Expression"
+				},
+				"folderPath": "irene/sales/",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
