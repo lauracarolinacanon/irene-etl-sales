@@ -15,11 +15,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
+				"folderPath": {
 					"value": "@dataset().p_tabla",
 					"type": "Expression"
 				},
-				"folderPath": "irene/sales/",
 				"fileSystem": "bronze"
 			},
 			"compressionCodec": "snappy"
