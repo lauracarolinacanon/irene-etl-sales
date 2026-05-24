@@ -1,0 +1,25 @@
+{
+	"name": "LS_SQL_IRENE_SALES_PROD",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sql-laura-dev-2026.database.windows.net",
+			"database": "free-sql-db-2329055",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "laura_canon",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_KEYVAULT_IRENE_SALES_DEV",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sql-password",
+				"secretVersion": "fec77ac500a7499d8b4aecee94a4c338"
+			}
+		}
+	}
+}

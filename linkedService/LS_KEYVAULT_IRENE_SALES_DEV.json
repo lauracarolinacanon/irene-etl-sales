@@ -1,0 +1,11 @@
+{
+	"name": "LS_KEYVAULT_IRENE_SALES_DEV",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://kv-irene-sales-dev.vault.azure.net/"
+		}
+	}
+}
