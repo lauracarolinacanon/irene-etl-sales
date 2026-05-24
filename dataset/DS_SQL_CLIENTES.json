@@ -5,6 +5,11 @@
 			"referenceName": "LS_SQL_IRENE_SALES_DEV",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"p.table": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [
@@ -38,7 +43,10 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "clientes"
+			"table": {
+				"value": "@dataset().p.table",
+				"type": "Expression"
+			}
 		}
 	}
 }
