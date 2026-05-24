@@ -6,8 +6,9 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"p.table": {
-				"type": "string"
+			"p_table": {
+				"type": "string",
+				"defaultValue": "clientes"
 			}
 		},
 		"annotations": [],
@@ -44,7 +45,7 @@
 		"typeProperties": {
 			"schema": "dbo",
 			"table": {
-				"value": "@dataset().p.table",
+				"value": "@dataset().p_table",
 				"type": "Expression"
 			}
 		}
