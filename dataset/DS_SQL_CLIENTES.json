@@ -1,0 +1,44 @@
+{
+	"name": "DS_SQL_CLIENTES",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQL_IRENE_SALES_DEV",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "cliente_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "nombre",
+				"type": "varchar"
+			},
+			{
+				"name": "ciudad",
+				"type": "varchar"
+			},
+			{
+				"name": "pais",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_registro",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "activo",
+				"type": "bit"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "clientes"
+		}
+	}
+}
