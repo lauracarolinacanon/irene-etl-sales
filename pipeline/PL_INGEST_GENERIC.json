@@ -128,7 +128,7 @@
 						"referenceName": "DS_PARQUET_BRONZE_CLIENTES",
 						"type": "DatasetReference",
 						"parameters": {
-							"p_tabla": "clientes"
+							"p_tabla": "irene/sales/clientes"
 						}
 					}
 				]
